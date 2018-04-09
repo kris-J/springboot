@@ -1,0 +1,15 @@
+CommandLineRunner、ApplicationRunner接口为容器启动成功后最后一步回调
+
+1.新建类实现CommandLineRunner接口
+2.注册ServerSuccessReport
+
+可以通过@Order或者Ordered接口控制执行顺序，从小到大
+
+
+
+CommandLineRunner、ApplicationRunner区别在于方法参数不一样
+CommandLineRunner为原始参数，没有做任何处理String[] arg
+ApplicationRunner为ApplicationArguments,对原始参数进一步封装
+
+--name=xxx
+ApplicationArguments对参数封装成为类似Map的结构，通过getOptionNames获取参数值，原始参数需要进行字符串处理

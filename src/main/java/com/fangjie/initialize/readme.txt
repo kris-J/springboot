@@ -2,7 +2,7 @@ ApplicationContextInitializer接口为在spring容器执行refreshed之前的一
 
 
 1.新建类实现ApplicationContextInitializer接口
-2.注册ApplicationContextInitializer
+2.注册MyApplicationContextInitializer
 
 注册方法：
 1.SpringApplication.addInitializers

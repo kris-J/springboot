@@ -1,5 +1,6 @@
 package com.fangjie;
 
+import com.fangjie.initialize.MyApplicationContextInitialize;
 import com.fangjie.listenerEvent.MyApplicationEvent;
 import com.fangjie.listenerEvent.MyApplicationListener;
 import org.springframework.boot.SpringApplication;
@@ -36,11 +37,16 @@ public class App {
 //        context.getBean(Runnable.class).run();
 //        System.out.println("-------end-------");
 
+        //initializer
+//        app.addInitializers(new MyApplicationContextInitialize());
+
         //添加事件监听器,添加监听要在run之前
 //        app.addListeners(new MyApplicationListener());
         ConfigurableApplicationContext context = app.run(args);
         //发布事件
         context.publishEvent(new MyApplicationEvent(new Object()));
+
+
 
         context.close();
     }

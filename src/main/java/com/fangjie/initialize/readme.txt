@@ -1,0 +1,10 @@
+ApplicationContextInitializer接口为在spring容器执行refreshed之前的一个回调
+
+
+1.新建类实现ApplicationContextInitializer接口
+2.注册ApplicationContextInitializer
+
+注册方法：
+1.SpringApplication.addInitializers
+2.使用配置文件项,application.properties中配置：context.initializer.classes=com.fangjie.initialize.MyApplicationContextInitialize,多个使用","逗号分隔
+3.使用spring.factories机制

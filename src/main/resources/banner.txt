@@ -1,0 +1,12 @@
+我是一个自定义banner
+
+
+1.app.setBannerMode(Banner.Mode.OFF);可关闭
+
+2.自定义banner可以在classpath下创建banner.txt文件
+
+3.application.properties中可以声明banner.location指定banner文件路径
+                                banner.charset指定字符集编码，默认UTF-8
+
+4.支持图片banner，jpg、png、gif。
+5.banner.img.location声明图片路径

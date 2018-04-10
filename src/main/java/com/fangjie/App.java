@@ -3,6 +3,7 @@ package com.fangjie;
 import com.fangjie.initialize.MyApplicationContextInitialize;
 import com.fangjie.listenerEvent.MyApplicationEvent;
 import com.fangjie.listenerEvent.MyApplicationListener;
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -15,6 +16,8 @@ public class App {
     public static void main(String[] args) {
 
         SpringApplication app = new SpringApplication(App.class);
+        //关闭输出banner,自定义banner可以在classpath下创建banner.txt文件
+//        app.setBannerMode(Banner.Mode.OFF);
 //        ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
         //获取配置1
 //        System.out.println(context.getEnvironment().getProperty("local.ip"));
